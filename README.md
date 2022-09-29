@@ -185,7 +185,7 @@ Search Input and Button
   <input type="submit" value="Search">
 </form>
 ```
-##EmployeeManager Page
+## EmployeeManager Page
 Form for creating employee
 ```
 <form action="/create" method="post">
@@ -203,7 +203,7 @@ Form for creating employee
     <input type="reset">
   </form>
 ```
-##Edit Page
+## Edit Page
 Form for editing
 ```
 <form method ="post" action ="/LoggedIn/<%= items._id %>?_method=PUT">
@@ -220,4 +220,4 @@ Form for editing
      <button>Submit</button>
 </form>
 ```
-Created by Brandon Grigg and Dale WrightIV
+Created by Brandon Grigg
