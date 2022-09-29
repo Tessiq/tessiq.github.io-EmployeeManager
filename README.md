@@ -1,4 +1,4 @@
-# tessiq.github.io-EmployeeManager
+# EmployeeManager
 ## Objective
 
 This website is used to create a employee database and store all of their information in at database through MongoDb. You can edit and delete any employee information through mongoose.
@@ -50,6 +50,7 @@ const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 ```
 # JavaScript Code
+## Index JavaScript
 Creating a Employee
 ```
 app.post("/create", function (req, res) {
@@ -125,6 +126,30 @@ Creating a Server
 const port = process.env.PORT || 4000;
 app.listen(port);
 console.log('Server started at http://localhost:' + port);
+```
+## Schema
+To Create the collections in Mongoose
+```
+const mongoose = require("mongoose")
+const EmployeeSchema = new mongoose.Schema({
+    fname: {
+        type: String
+    },
+    lname: {
+        type: String
+    },
+    job: {
+        type: String
+    },
+    email: {
+        type: String
+    },
+    number: {
+        type: String
+    }
+});
+const Employees = mongoose.model('Employees', EmployeeSchema);
+module.exports = Employees
 ```
 # HTML Code
 ## LoggedIn Page
