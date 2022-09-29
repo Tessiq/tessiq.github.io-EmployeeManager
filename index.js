@@ -6,8 +6,7 @@ const methodOverride = require('method-override')
 const app = new express();
 const port = process.env.PORT || 4000;
 const url = 'mongodb://localhost:27017/EmployeeDB';
-const Employee = require("./model/EmployeeSchema")
-let topic = "Successfully Logged In";
+const Employee = require("./model/EmployeeSchema");
 main().catch(err => console.log(err));
 async function main() {
     await mongoose.connect(url);
@@ -45,7 +44,14 @@ app.get('/Edit', function (req, res) {
 });
 app.get('/LoggedIn', async (req, res) =>{
     const items = await Employee.find({});
+    let topic = "Successfully Logged In";
     res.render('LoggedIn', { items: items, topic: topic })
+});
+app.get('/LoggedInDataBase', async (req, res) => {
+    const items = await Employee.find({});
+    let topic = "Employee Database";
+    res.render('LoggedIn', { items: items, topic: topic })
+
 });
 app.get('/LoggedInE', async (req, res) => {
     const items = await Employee.find({});
