@@ -11,7 +11,7 @@ In this website I used MongoDb, Express, ejs, bosy-paser, mongoose, method-overr
 
 Use the package manager [npm](https://www.npmjs.com/) to install packages in the termial.
 
-```bash
+```
 npm install express
 npm install ejs
 npm install body-parser
